@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Photo Gallery</h1>
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="btn active" onclick="filterSelection('all')">Show all</button>
+            <button class="btn" onclick="filterSelection('nature')">Nature</button>
+            <button class="btn" onclick="filterSelection('city')">City</button>
+            <button class="btn" onclick="filterSelection('tech')">Tech</button>
+        </div>
+
+        <!-- Gallery Grid -->
+                <!-- Gallery Grid with Live Photographic Links -->
+        <div class="gallery-grid">
+            <div class="column nature show">
+                <img src="https://unsplash.com" alt="Nature Forest" onclick="openLightbox(this)">
+            </div>
+            <div class="column nature show">
+                <img src="https://unsplash.com" alt="Nature Woods" onclick="openLightbox(this)">
+            </div>
+            <div class="column city show">
+                <img src="https://unsplash.com" alt="City Skyline" onclick="openLightbox(this)">
+            </div>
+            <div class="column city show">
+                <img src="https://unsplash.com" alt="City Bridge" onclick="openLightbox(this)">
+            </div>
+            <div class="column tech show">
+                <img src="https://unsplash.com" alt="Tech Circuit" onclick="openLightbox(this)">
+            </div>
+            <div class="column tech show">
+                <img src="https://unsplash.com" alt="Tech Cyber Code" onclick="openLightbox(this)">
+            </div>
+        </div>
+
+
+    <!-- Lightbox Modal Container -->
+    <div id="lightbox" class="modal">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <div class="modal-content">
+            <img id="lightbox-img" src="" alt="Popup view">
+            <div id="caption"></div>
+            <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+            <a class="next" onclick="changeImage(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
